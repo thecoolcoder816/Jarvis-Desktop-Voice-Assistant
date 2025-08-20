@@ -125,12 +125,8 @@ def set_name() -> None:
         speak("Sorry, I couldn't catch that.")
 
 def load_name() -> str:
-    """Loads the assistant's name from a file, or uses a default name."""
-    try:
-        with open("assistant_name.txt", "r") as file:
-            return file.read().strip()
-    except FileNotFoundError:
-        return "Jarvis"  # Default name
+    """Always returns the assistant's name as Jarvis."""
+    return "Jarvis"
 
 
 def search_wikipedia(query):
@@ -199,3 +195,4 @@ if __name__ == "__main__":
         elif "offline" in query or "exit" in query:
             speak("Going offline. Have a good day!")
             break
+
