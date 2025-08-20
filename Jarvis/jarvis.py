@@ -133,7 +133,7 @@ def search_wikipedia(query):
     """Searches Wikipedia and returns a summary."""
     try:
         speak("Searching Wikipedia...")
-        result = wikipedia.summary(query, sentences=2)
+        result = wikipedia.summary(query, sentences=3)
         speak(result)
         print(result)
     except wikipedia.exceptions.DisambiguationError:
@@ -195,4 +195,5 @@ if __name__ == "__main__":
         elif "offline" in query or "exit" in query:
             speak("Going offline. Have a good day!")
             break
+
 
